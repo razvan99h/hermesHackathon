@@ -41,7 +41,7 @@ export class SignUpParentPage {
   signUpParent()
   {
     parent = {
-      data : {
+      "data" : {
         "firstName" : this.firstName,
         "lastName" : this.lastName,
         "email" : this.email,
