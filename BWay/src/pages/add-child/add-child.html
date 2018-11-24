@@ -1,0 +1,76 @@
+<!--
+  Generated template for the AddChildPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>AddChild</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="backgroundIMG">
+
+  <ion-item>
+    <ion-label floating>First Name</ion-label>
+    <ion-input type="text" [(ngModel)] = "firstName"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Last Name</ion-label>
+    <ion-input type="text" [(ngModel)] = "lastName"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating >Gender</ion-label>
+    <ion-select [(ngModel)]="gender">
+      <ion-option value="male">Male</ion-option>
+      <ion-option value="female">Female</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label floating >Birth Date</ion-label>
+    <ion-input type="text" [(ngModel)] = "birthDate"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating >Location</ion-label>
+    <ion-input type="text" [(ngModel)] = "location"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating >Phone Number</ion-label>
+    <ion-input type="text" [(ngModel)] = "phoneNumber"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Skills</ion-label>
+    <ion-select [(ngModel)]="skills" multiple="true">
+      <ion-option value="adaptable">Adaptable</ion-option>
+      <ion-option value="honest">Honest</ion-option>
+      <ion-option value="patient">Patience</ion-option>
+      <ion-option value="confident">Confident</ion-option>
+      <ion-option value="commited">Commited</ion-option>
+      <ion-option value="resilient">Resilient</ion-option>
+      <ion-option value="emphatic">Emphatic</ion-option>
+      <ion-option value="analytical ">Analytical </ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>School Year</ion-label>
+    <ion-select [(ngModel)]="schoolYear">
+      <ion-option value="5">5</ion-option>
+      <ion-option value="6">6</ion-option>
+      <ion-option value="7">7</ion-option>
+      <ion-option value="8">8</ion-option>
+      <ion-option value="9">9</ion-option>
+      <ion-option value="10">10</ion-option>
+      <ion-option value="11">11</ion-option>
+      <ion-option value="12 ">12 </ion-option>
+    </ion-select>
+  </ion-item>
+
+  <div class="flex">
+    <button class="buttons1" ion-button color="primary" outline round >Done</button>
+    <button class="buttons2" ion-button color="primary" outline round >Add Another Child</button>
+  </div>
+
+  </ion-content>

@@ -17,27 +17,27 @@
 
   <ion-item>
     <ion-label floating>First Name</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)] = "firstName"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label floating>Last Name</ion-label>
-    <ion-input type="text" ></ion-input>
+    <ion-input type="text" [(ngModel)] = "lastName"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label floating>Email</ion-label>
-    <ion-input type="email"></ion-input>
+    <ion-input type="email" floating [(ngModel)] = "email"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label floating>Password</ion-label>
-    <ion-input type="password"></ion-input>
+    <ion-label floating >Password</ion-label>
+    <ion-input type="password" [(ngModel)] = "passwordSignUp"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label floating>Confirm Password</ion-label>
-    <ion-input type="password"></ion-input>
+    <ion-label floating >Confirm Password</ion-label>
+    <ion-input type="password" [(ngModel)] = "passwordSignUp2"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label floating>Phone Number (opt)</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-label floating >Phone Number (opt)</ion-label>
+    <ion-input type="text" [(ngModel)] = "phoneNumber"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label floating>Payment</ion-label>
@@ -48,7 +48,7 @@
   </ion-item>
 
 
-  <button class="signup_button" ion-button color="primary" outline round  >Register</button>
+  <button class="signup_button" ion-button color="primary" outline round (click) = "signUpParent()"  >Register</button>
   <button class="col" ion-button color="primary" clear (click) = "goToLoginPage()">Do you already have an account?</button>
 
   </ion-content>

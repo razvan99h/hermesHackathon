@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AuthService } from '../../providers/auth-service/auth-service'
+import { DatabaseProvider } from '../../providers/database/database'
 
 /**
  * Generated class for the ProfilePage page.
@@ -16,7 +17,7 @@ import { AuthService } from '../../providers/auth-service/auth-service'
 })
 export class ProfilePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public authService : AuthService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public authService : AuthService, public database: DatabaseProvider) {
   }
 
   ionViewDidLoad() {
@@ -26,5 +27,12 @@ export class ProfilePage {
   logOut()
   {
     this.authService.logout()
+  }
+
+  addStudent()
+  {
+    console.log(this.authService.getUserToken())
+    this.database.addStudent({})
+
   }
 }
