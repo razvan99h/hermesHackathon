@@ -19,6 +19,7 @@ import { TabsPages } from '../pages/tabs/tabs';
 import { ProfilePage } from '../pages/profile/profile';
 import { FrgPasswordPage } from "../pages/frg-password/frg-password";
 import { DatabaseProvider } from '../providers/database/database';
+import { AddChildPage } from '../pages/add-child/add-child'
 
 
 export const firebaseConfig = {
@@ -40,7 +41,8 @@ export const firebaseConfig = {
     LoginPage,
     ProfilePage,
     TabsPages,
-    FrgPasswordPage
+    FrgPasswordPage,
+    AddChildPage
   ],
   imports: [
     BrowserModule,
@@ -60,7 +62,8 @@ export const firebaseConfig = {
     ProfilePage,
     LoginPage,
     TabsPages,
-    FrgPasswordPage
+    FrgPasswordPage,
+    AddChildPage
   ],
   providers: [
     StatusBar,

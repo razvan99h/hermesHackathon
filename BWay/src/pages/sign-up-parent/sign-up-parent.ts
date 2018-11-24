@@ -40,7 +40,7 @@ export class SignUpParentPage {
 
   signUpParent()
   {
-    this.parent = {
+    parent = {
       data : {
         "firstName" : this.firstName,
         "lastName" : this.lastName,
@@ -51,9 +51,9 @@ export class SignUpParentPage {
       "type" : "parent"
     }
 
-    this.authService.signupUser(this.parent.data.email, this.passwordSignUp).then(data =>
+    this.authService.signupUser(parent.data.email, this.passwordSignUp).then(data =>
     {
-      this.databaseProvider.addParent(this.parent)
+      this.databaseProvider.addParent(parent)
     })
   }
 
