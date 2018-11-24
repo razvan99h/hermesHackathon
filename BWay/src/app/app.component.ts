@@ -19,7 +19,7 @@ export class MyApp {
         this.afAuth.authState.subscribe(user =>
         {
           if(user)
-            this.rootPage = TabsPage;
+            this.rootPage = TabsPages;
           else
             this.rootPage = LoginPage;
         });
