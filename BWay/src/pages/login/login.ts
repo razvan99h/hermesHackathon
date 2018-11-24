@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams, LoadingController, AlertController
 import { SignUpStudentPage } from '../sign-up-student/sign-up-student';
 import { FrgPasswordPage } from "../frg-password/frg-password";
 import { AuthService } from '../../providers/auth-service/auth-service';
-import { TabsPage} from '../tabs/tabs'
+import { TabsPages} from '../tabs/tabs'
 
 
 /**
@@ -40,7 +40,6 @@ export class LoginPage {
   goToHomePage(){
     console.log(this.email, this.pass);
     this.authService.login_user(this.email, this.pass).then((response) => {
-        this.navCtrl.push(TabsPage)
         console.log(response);
       }, (error) =>{
         //this.invalidEmailPassAlert();

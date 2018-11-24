@@ -43,11 +43,33 @@
     </ion-item>
     <ion-item>
       <ion-label floating>Subjects</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-select [(ngModel)]="subject">
+        <ion-option value="career">Career Orientation</ion-option>
+        <ion-option value="math">Mathematics</ion-option>
+        <ion-option value="info">Informatics</ion-option>
+        <ion-option value="bio">Biology</ion-option>
+        <ion-option value="chem">Chemistry</ion-option>
+        <ion-option value="phy">Physics</ion-option>
+        <ion-option value="eco">Economy</ion-option>
+        <ion-option value="logic">Logic</ion-option>
+        <ion-option value="ro">Romanian</ion-option>
+        <ion-option value="eng">English</ion-option>
+        <ion-option value="hys">History</ion-option>
+        <ion-option value="geo">Geography</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item *ngIf="subject != 'career' && subject != ''">
+      <ion-label floating>Level</ion-label>
+      <ion-select [(ngModel)]="level">
+        <ion-option value="advanced">Advanced</ion-option>
+        <ion-option value="intermediate">Intermediate</ion-option>
+        <ion-option value="beginner">Beginner</ion-option>
+      </ion-select>
     </ion-item>
 
-  <button class="skip_button" ion-button color="primary" outline round >Skip</button>
-  
-  <button class="done_button" ion-button color="primary" outline round >Done</button>
+  <div class="flex">
+    <button class="buttons" ion-button color="primary" outline round >Skip</button>
+    <button class="buttons" ion-button color="primary" outline round >Done</button>
+  </div>
 
   </ion-content>
