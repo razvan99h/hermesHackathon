@@ -10,14 +10,15 @@ import { AuthService } from '../providers/auth-service/auth-service';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { BeforeSignUpPage } from '../pages/before-sign-up/before-sign-up';
 import { SignUpStudentPage } from '../pages/sign-up-student/sign-up-student'
 import { SignUpDetailsPage } from '../pages/sign-up-details/sign-up-details'
+import { SignUpParentPage } from '../pages/sign-up-parent/sign-up-parent'
 import { LoginPage } from '../pages/login/login';
 import { TabsPages } from '../pages/tabs/tabs';
 import { ProfilePage } from '../pages/profile/profile';
 import { FrgPasswordPage } from "../pages/frg-password/frg-password";
 import { DatabaseProvider } from '../providers/database/database';
-
 
 
 export const firebaseConfig = {
@@ -32,8 +33,10 @@ export const firebaseConfig = {
   declarations: [
     MyApp,
     HomePage,
+    BeforeSignUpPage,
     SignUpStudentPage,
     SignUpDetailsPage,
+    SignUpParentPage,
     LoginPage,
     ProfilePage,
     TabsPages,
@@ -50,8 +53,10 @@ export const firebaseConfig = {
   entryComponents: [
     MyApp,
     HomePage,
+    BeforeSignUpPage,
     SignUpStudentPage,
     SignUpDetailsPage,
+    SignUpParentPage,
     ProfilePage,
     LoginPage,
     TabsPages,

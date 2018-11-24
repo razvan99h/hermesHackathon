@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
-import { SignUpStudentPage } from '../sign-up-student/sign-up-student';
+import { BeforeSignUpPage } from '../before-sign-up/before-sign-up';
 import { FrgPasswordPage } from "../frg-password/frg-password";
 import { AuthService } from '../../providers/auth-service/auth-service';
 import { TabsPages} from '../tabs/tabs'
@@ -38,17 +38,20 @@ export class LoginPage {
   }
 
   goToHomePage(){
-    console.log(this.email, this.pass);
-    this.authService.login_user(this.email, this.pass).then((response) => {
-        console.log(response);
-      }, (error) =>{
-        //this.invalidEmailPassAlert();
-        console.log("no", error);
-      });
+    if(!(this.email == undefined || this.pass == undefined))
+    {
+      console.log(this.email, this.pass);
+      this.authService.login_user(this.email, this.pass).then((response) => {
+          console.log(response);
+        }, (error) =>{
+          //this.invalidEmailPassAlert();
+          console.log("no", error);
+        });
+    }
   }
 
-  goToSignUpStudentPage(){
-    this.navCtrl.push(SignUpStudentPage);
+  goToBeforeSignUpPage(){
+    this.navCtrl.push(BeforeSignUpPage);
   }
 
   goToForgottenPasswordPage(){

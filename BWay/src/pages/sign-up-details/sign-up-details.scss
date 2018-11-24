@@ -12,6 +12,12 @@ page-sign-up-details {
       margin: 0 0 0 16px;
   }
 
+  .backgroundIMG
+  {
+    background-image: url("https://image.ibb.co/iMY7Rk/background_polygons.png");
+    background-size: cover;
+  }
+
   .flex
   {
       display: flex;
@@ -29,4 +35,10 @@ page-sign-up-details {
       margin: 0 10px;
       flex:1;
   }
+
+  .item
+  {
+    background-color: transparent;
+  }
+
 }
