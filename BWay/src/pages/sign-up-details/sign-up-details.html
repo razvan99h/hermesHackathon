@@ -41,32 +41,55 @@
       <ion-option value="addlater">Add Later</ion-option>
     </ion-select>
   </ion-item>
+
   <ion-item>
-    <ion-label floating>Subjects</ion-label>
+    <ion-label floating>Subject</ion-label>
     <ion-select [(ngModel)]="subject">
       <ion-option value="career">Career Orientation</ion-option>
-      <ion-option value="mathematics">Mathematics</ion-option>
-      <ion-option value="informatics">Informatics</ion-option>
-      <ion-option value="biology">Biology</ion-option>
-      <ion-option value="chemistry">Chemistry</ion-option>
-      <ion-option value="physics">Physics</ion-option>
-      <ion-option value="economy">Economy</ion-option>
-      <ion-option value="logic">Logic</ion-option>
-      <ion-option value="romanian">Romanian</ion-option>
-      <ion-option value="english">English</ion-option>
-      <ion-option value="history">History</ion-option>
-      <ion-option value="geography">Geography</ion-option>
-      <ion-option value="music">Music</ion-option>
+      <ion-option value="consultation">Consultations</ion-option>
     </ion-select>
   </ion-item>
-  <ion-item *ngIf="subject != 'career' && subject != ''">
-    <ion-label floating>Level</ion-label>
-    <ion-select [(ngModel)]="level">
-      <ion-option value="advanced">Advanced</ion-option>
-      <ion-option value="intermediate">Intermediate</ion-option>
-      <ion-option value="beginner">Beginner</ion-option>
-    </ion-select>
-  </ion-item>
+
+  <div *ngIf="subject != 'career' && subject != ''">
+    <ion-item>
+      <ion-label floating>Discipline</ion-label>
+      <ion-select [(ngModel)]="discipline">
+        <ion-option value="mathematics">Mathematics</ion-option>
+        <ion-option value="informatics">Informatics</ion-option>
+        <ion-option value="biology">Biology</ion-option>
+        <ion-option value="chemistry">Chemistry</ion-option>
+        <ion-option value="physics">Physics</ion-option>
+        <ion-option value="economy">Economy</ion-option>
+        <ion-option value="logic">Logic</ion-option>
+        <ion-option value="romanian">Romanian</ion-option>
+        <ion-option value="english">English</ion-option>
+        <ion-option value="history">History</ion-option>
+        <ion-option value="geography">Geography</ion-option>
+        <ion-option value="music">Music</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Minimum School Year</ion-label>
+      <ion-select [(ngModel)]="minSchoolYear">
+
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Maximum School Year</ion-label>
+      <ion-select [(ngModel)]="maxSchoolYear">
+
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Level</ion-label>
+      <ion-select [(ngModel)]="level">
+        <ion-option value="advanced">Advanced</ion-option>
+        <ion-option value="intermediate">Intermediate</ion-option>
+        <ion-option value="beginner">Beginner</ion-option>
+      </ion-select>
+    </ion-item>
+  </div>
+
 
   <div class="flex">
     <button class="buttons" ion-button color="primary" outline round >Skip</button>

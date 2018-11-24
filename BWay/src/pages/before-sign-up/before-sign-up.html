@@ -7,14 +7,16 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>BeforeSignUp</ion-title>
+    <ion-title>You are: </ion-title>
   </ion-navbar>
 
 </ion-header>
 
-<ion-content padding>
-
-  <button ion-button color="primary" name="SignUpStudent" (click) = "goToSignUpStudentPage()">Sign Up as Student</button>
-  <button ion-button color="primary" name="SignUpParent" (click) = "goToSignUpParentPage()">Sign Up as Parent</button>
+<ion-content padding class="backgroundIMG">
+  <p>A Parent</p>
+  <img src="assets/imgs/family.png" class="size" (click) = "goToSignUpParentPage()">
+  <div class="line"></div>
+  <p>A Student</p>
+  <img src="assets/imgs/graduate.png" class="size" (click) = "goToSignUpStudentPage()">
 
 </ion-content>
