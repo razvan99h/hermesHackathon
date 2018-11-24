@@ -1,4 +1,4 @@
-page-sign-up-parent {
+page-sign-up-details {
 
   p {
     color: red;
@@ -12,15 +12,28 @@ page-sign-up-parent {
       margin: 0 0 0 16px;
   }
 
-  .signup_button
-  {
-    margin: 32px auto 12px auto;
-    display: block;
-  }
   .backgroundIMG
   {
     background-image: url("https://image.ibb.co/iMY7Rk/background_polygons.png");
     background-size: cover;
+  }
+
+  .flex
+  {
+      display: flex;
+      margin-top: 30px;
+  }
+
+  .LR_buttons
+  {
+    margin: 20px 0 8px 0;
+  }
+
+  .buttons
+  {
+      //width:150px;
+      margin: 0 10px;
+      flex:1;
   }
 
   .item

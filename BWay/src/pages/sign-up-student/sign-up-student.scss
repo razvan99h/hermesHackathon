@@ -12,9 +12,20 @@ page-sign-up-student {
       margin: 0 0 0 16px;
   }
 
-  .register_button
+  .signup_button
   {
     margin: 32px auto 12px auto;
     display: block;
   }
+  .backgroundIMG
+  {
+    background-image: url("https://image.ibb.co/iMY7Rk/background_polygons.png");
+    background-size: cover;
+  }
+
+  .item
+  {
+    background-color: transparent;
+  }
+
 }

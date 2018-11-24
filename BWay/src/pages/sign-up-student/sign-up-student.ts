@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { SignUpDetailsPage } from '../sign-up-details/sign-up-details'
+import { LoginPage } from '../login/login'
+
 
 /**
  * Generated class for the SignUpStudentPage page.
@@ -11,7 +14,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @IonicPage()
 @Component({
   selector: 'page-sign-up-student',
-  templateUrl: 'sign-up-student.html',
+  templateUrl: 'sign-up-student.html'
 })
 export class SignUpStudentPage {
 
@@ -22,4 +25,13 @@ export class SignUpStudentPage {
     console.log('ionViewDidLoad SignUpStudentPage');
   }
 
+  goToSignUpDetailsPage(){
+
+    this.navCtrl.push( SignUpDetailsPage )
+  }
+
+  goToLoginPage(){
+
+    this.navCtrl.push( LoginPage )
+  }
 }
