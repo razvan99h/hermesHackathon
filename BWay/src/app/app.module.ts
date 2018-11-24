@@ -16,6 +16,7 @@ import { LoginPage } from '../pages/login/login';
 import { TabsPages } from '../pages/tabs/tabs';
 import { ProfilePage } from '../pages/profile/profile';
 import { FrgPasswordPage } from "../pages/frg-password/frg-password";
+import { DatabaseProvider } from '../providers/database/database';
 
 
 
@@ -60,7 +61,8 @@ export const firebaseConfig = {
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthService
+    AuthService,
+    DatabaseProvider
   ]
 })
 export class AppModule {}
