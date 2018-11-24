@@ -79,13 +79,27 @@
     <ion-item>
       <ion-label floating>Minimum School Year</ion-label>
       <ion-select [(ngModel)]="minSchoolYear">
-
+        <ion-option value="5">5</ion-option>
+        <ion-option value="6">6</ion-option>
+        <ion-option value="7">7</ion-option>
+        <ion-option value="8">8</ion-option>
+        <ion-option value="9">9</ion-option>
+        <ion-option value="10">10</ion-option>
+        <ion-option value="11">11</ion-option>
+        <ion-option value="12 ">12 </ion-option>
       </ion-select>
     </ion-item>
     <ion-item>
       <ion-label floating>Maximum School Year</ion-label>
       <ion-select [(ngModel)]="maxSchoolYear">
-
+        <ion-option *ngIf="parseInteger(minSchoolYear) <= 5" value="5">5</ion-option>
+        <ion-option *ngIf="parseInteger(minSchoolYear) <= 6" value="6">6</ion-option>
+        <ion-option *ngIf="parseInteger(minSchoolYear) <= 7" value="7">7</ion-option>
+        <ion-option *ngIf="parseInteger(minSchoolYear) <= 8" value="8">8</ion-option>
+        <ion-option *ngIf="parseInteger(minSchoolYear) <= 9" value="9">9</ion-option>
+        <ion-option *ngIf="parseInteger(minSchoolYear) <= 10" value="10">10</ion-option>
+        <ion-option *ngIf="parseInteger(minSchoolYear) <= 11" value="11">11</ion-option>
+        <ion-option *ngIf="parseInteger(minSchoolYear) <= 12" value="12 ">12 </ion-option>
       </ion-select>
     </ion-item>
     <ion-item>
