@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { SignUpDetailsPage } from '../sign-up-details/sign-up-details'
 
 /**
- * Generated class for the SignUpStudentPage page.
+ * Generated class for the SignUpDetailsPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,20 +10,16 @@ import { SignUpDetailsPage } from '../sign-up-details/sign-up-details'
 
 @IonicPage()
 @Component({
-  selector: 'page-sign-up-student',
-  templateUrl: 'sign-up-student.html' 
+  selector: 'page-sign-up-details',
+  templateUrl: 'sign-up-details.html',
 })
-export class SignUpStudentPage {
-
+export class SignUpDetailsPage {
+  gender = "male"
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SignUpStudentPage');
+    console.log('ionViewDidLoad SignUpDetailsPage');
   }
 
-  goToSignUpDetailsPage(){
-
-    this.navCtrl.push( SignUpDetailsPage )
-  }
 }

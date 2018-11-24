@@ -1,4 +1,4 @@
-page-sign-up-student {
+page-sign-up-details {
 
   p {
     color: red;
@@ -12,7 +12,13 @@ page-sign-up-student {
       margin: 0 0 0 16px;
   }
 
-  .signup_button
+  .skip_button
+  {
+    margin: 32px auto 12px auto;
+    display: block;
+  }
+
+  .done_button
   {
     margin: 32px auto 12px auto;
     display: block;

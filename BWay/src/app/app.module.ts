@@ -9,12 +9,10 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-<<<<<<< HEAD
-import { SignUpStudentPage } from '../pages/sign-up-student/sign-up-student'
-=======
 import { TabsPage } from '../pages/tabs/tabs';
 import { ProfilePage } from '../pages/profile/profile'
->>>>>>> de30ac20361a799d3338548259959f8845fcb3fd
+import { SignUpStudentPage } from '../pages/sign-up-student/sign-up-student'
+import { SignUpDetailsPage } from '../pages/sign-up-details/sign-up-details'
 
 export const firebaseConfig = {
   apiKey: "AIzaSyAEm_npBxolAXgfj4Muwae7AwEuZISsPzQ",
@@ -28,12 +26,10 @@ export const firebaseConfig = {
   declarations: [
     MyApp,
     HomePage,
-<<<<<<< HEAD
-    SignUpStudentPage
-=======
     ProfilePage,
-    TabsPage
->>>>>>> de30ac20361a799d3338548259959f8845fcb3fd
+    TabsPage,
+    SignUpStudentPage,
+    SignUpDetailsPage
   ],
   imports: [
     BrowserModule,
@@ -46,12 +42,10 @@ export const firebaseConfig = {
   entryComponents: [
     MyApp,
     HomePage,
-<<<<<<< HEAD
-    SignUpStudentPage
-=======
     ProfilePage,
-    TabsPage
->>>>>>> de30ac20361a799d3338548259959f8845fcb3fd
+    TabsPage,
+    SignUpStudentPage,
+    SignUpDetailsPage
   ],
   providers: [
     StatusBar,
