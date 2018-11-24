@@ -9,10 +9,13 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { TabsPage } from '../pages/tabs/tabs';
-import { ProfilePage } from '../pages/profile/profile'
 import { SignUpStudentPage } from '../pages/sign-up-student/sign-up-student'
 import { SignUpDetailsPage } from '../pages/sign-up-details/sign-up-details'
+import { LoginPage } from '../pages/login/login';
+import { TabsPage } from '../pages/tabs/tabs';
+import { ProfilePage } from '../pages/profile/profile';
+import { FrgPasswordPage } from "../pages/frg-password/frg-password";
+
 
 export const firebaseConfig = {
   apiKey: "AIzaSyAEm_npBxolAXgfj4Muwae7AwEuZISsPzQ",
@@ -26,10 +29,12 @@ export const firebaseConfig = {
   declarations: [
     MyApp,
     HomePage,
+    SignUpStudentPage,
+    SignUpDetailsPage,
+    LoginPage,
     ProfilePage,
     TabsPage,
-    SignUpStudentPage,
-    SignUpDetailsPage
+    FrgPasswordPage
   ],
   imports: [
     BrowserModule,
@@ -42,10 +47,12 @@ export const firebaseConfig = {
   entryComponents: [
     MyApp,
     HomePage,
-    ProfilePage,
-    TabsPage,
     SignUpStudentPage,
-    SignUpDetailsPage
+    SignUpDetailsPage,
+    ProfilePage,
+    LoginPage,
+    TabsPage,
+    FrgPasswordPage
   ],
   providers: [
     StatusBar,

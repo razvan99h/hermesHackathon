@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { LoginPage } from "../login/login";
 /**
  * Generated class for the FrgPasswordPage page.
  *
@@ -15,11 +15,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class FrgPasswordPage {
 
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FrgPasswordPage');
+  }
+
+  goToLoginPage(){
+    this.navCtrl.push(LoginPage);
   }
 
 }
