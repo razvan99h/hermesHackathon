@@ -14,7 +14,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'sign-up-details.html',
 })
 export class SignUpDetailsPage {
-  gender = "male"
+  gender = ""
+  payment = ""
+  subject = ""
+  level = ""
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
