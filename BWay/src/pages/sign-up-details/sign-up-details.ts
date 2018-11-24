@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AuthService } from '../../providers/auth-service/auth-service';
+import { DatabaseProvider } from '../../providers/database/database'
 
 /**
  * Generated class for the SignUpDetailsPage page.
@@ -27,7 +29,9 @@ export class SignUpDetailsPage {
 
 
   constructor(public navCtrl: NavController,
-              public navParams: NavParams) {
+              public navParams: NavParams,
+              public authService: AuthService,
+              public databaseProvider: DatabaseProvider) {
     this.student = navParams.get("student")
   }
 
@@ -45,7 +49,10 @@ export class SignUpDetailsPage {
     this.student.data.location = this.location
     this.student.data.level = this.level
     this.student.data.subject = this.subject
-
+    this.authService.signupUser(this.student.data.email, this.student.data.pass).then(data =>
+    {
+      this.databaseProvider.addStudent(this.student)
+    })
 
 
     console.log(this.student)

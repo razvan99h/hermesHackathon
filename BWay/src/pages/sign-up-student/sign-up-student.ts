@@ -50,7 +50,8 @@ export class SignUpStudentPage {
             "rating" : "",
             "self_description" : "",
             "subject" : "",
-            "level" : ""
+            "level" : "",
+            "pass" : this.passwordSignUp
           },
   		"type" : "student"
     };
