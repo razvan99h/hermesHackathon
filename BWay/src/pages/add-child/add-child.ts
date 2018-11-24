@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { LoginPage } from '../login/login'
-
 
 /**
- * Generated class for the SignUpParentPage page.
+ * Generated class for the AddChildPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -12,30 +10,25 @@ import { LoginPage } from '../login/login'
 
 @IonicPage()
 @Component({
-  selector: 'page-sign-up-parent',
-  templateUrl: 'sign-up-parent.html',
+  selector: 'page-add-child',
+  templateUrl: 'add-child.html',
 })
-export class SignUpParentPage {
+export class AddChildPage {
 
   firstName = ""
   lastName = ""
-  email = ""
-  passwordSignUp = ""
-  passwordSignUp2 = ""
+  gender = ""
+  birthDate = ""
+  location = ""
   phoneNumber = ""
-  payment = ""
-
+  skills = ""
+  schoolYear = ""
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SignUpParentPage');
-  }
-
-  goToLoginPage()
-  {
-    this.navCtrl.push( LoginPage )
+    console.log('ionViewDidLoad AddChildPage');
   }
 
 }
