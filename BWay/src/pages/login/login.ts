@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
 import { SignUpStudentPage } from '../sign-up-student/sign-up-student';
 import { FrgPasswordPage } from "../frg-password/frg-password";
+import { AuthService } from '../../providers/auth-service/auth-service';
+import { TabsPage} from '../tabs/tabs'
 
 
 /**
@@ -24,8 +26,12 @@ export class LoginPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     public loadingCtrl: LoadingController,
-    public alerCtrl: AlertController)
-  {}
+    public alerCtrl: AlertController,
+    public authService: AuthService
+  )
+  {
+
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
@@ -33,6 +39,13 @@ export class LoginPage {
 
   goToHomePage(){
     console.log(this.email, this.pass);
+    this.authService.login_user(this.email, this.pass).then((response) => {
+        this.navCtrl.push(TabsPage)
+        console.log(response);
+      }, (error) =>{
+        //this.invalidEmailPassAlert();
+        console.log("no", error);
+      });
   }
 
   goToSignUpStudentPage(){
