@@ -35,4 +35,9 @@ export class AuthService {
       this.state = state;
       });
   }
+
+  getUserToken()
+  {
+    return this.afAuth.auth.currentUser.uid
+  }
 }
