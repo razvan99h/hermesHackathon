@@ -12,15 +12,21 @@ page-sign-up-details {
       margin: 0 0 0 16px;
   }
 
-  .skip_button
+  .flex
   {
-    margin: 32px auto 12px auto;
-    display: block;
+      display: flex;
+      margin-top: 30px;
   }
 
-  .done_button
+  .LR_buttons
   {
-    margin: 32px auto 12px auto;
-    display: block;
+    margin: 20px 0 8px 0;
+  }
+
+  .buttons
+  {
+      //width:150px;
+      margin: 0 10px;
+      flex:1;
   }
 }
