@@ -38,7 +38,7 @@ export class SignUpDetailsPage {
   goToHomePage()
   {
     this.student.data.gender = this.gender
-    this.student.data.payment = this.paymemt
+    this.student.data.payment = this.payment
     this.student.data.faculty = this.faculty
     this.student.data.birth_date = this.birthDate
     this.student.data.self_description = this.selfDescription
@@ -46,7 +46,7 @@ export class SignUpDetailsPage {
     this.student.data.level = this.level
     this.student.data.subject = this.subject
 
-    
+
 
     console.log(this.student)
   }
