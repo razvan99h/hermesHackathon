@@ -18,25 +18,27 @@ export class DatabaseProvider {
 
   addStudent(student)
   {
-    student = {"data" : {
-          "birth_date" : "31.12.1999",
-          "email" : "test@yahoo.com",
-          "faculty" : "UBB Info",
-          "gender" : "male",
-          "location" : "Cluj-Napoca",
-          "name" : "Rusu Raul",
-          "payment" : "bitcoin",
-          "phone" : "0749500717",
-          "rating" : "4",
-          "self_description" : "Prost gramada",
-          "subject" : "info"
-        },
-        "type" : "student"
-      }
     var path = "/users/" + this.authService.getUserToken()
-    console.log(path)
     this.item = this.db.object(path)
     this.item.update(student)
   }
 
+  addParent(parent)
+  {
+    var path = "/users/" + this.authService.getUserToken()
+    this.item = this.db.object(path)
+    this.item.update(parent)
+  }
+
+  addConsultation(consultation, parentID, studentID, childID)
+  {
+
+  }
+
+  addChild(child)
+  {
+    var path = "/users/" + this.authService.getUserToken()
+    this.item = this.db.object(path)
+    this.item.update(child)
+  }
 }
