@@ -38,13 +38,16 @@ export class LoginPage {
   }
 
   goToHomePage(){
-    console.log(this.email, this.pass);
-    this.authService.login_user(this.email, this.pass).then((response) => {
-        console.log(response);
-      }, (error) =>{
-        //this.invalidEmailPassAlert();
-        console.log("no", error);
-      });
+    if(!(this.email == undefined || this.pass == undefined))
+    {
+      console.log(this.email, this.pass);
+      this.authService.login_user(this.email, this.pass).then((response) => {
+          console.log(response);
+        }, (error) =>{
+          //this.invalidEmailPassAlert();
+          console.log("no", error);
+        });
+    }
   }
 
   goToBeforeSignUpPage(){
