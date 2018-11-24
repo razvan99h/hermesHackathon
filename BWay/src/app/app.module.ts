@@ -11,6 +11,7 @@ import { AuthService } from '../providers/auth-service/auth-service';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SignUpStudentPage } from '../pages/sign-up-student/sign-up-student'
+import { SignUpDetailsPage } from '../pages/sign-up-details/sign-up-details'
 import { LoginPage } from '../pages/login/login';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ProfilePage } from '../pages/profile/profile';
@@ -31,6 +32,7 @@ export const firebaseConfig = {
     MyApp,
     HomePage,
     SignUpStudentPage,
+    SignUpDetailsPage,
     LoginPage,
     ProfilePage,
     TabsPage,
@@ -48,6 +50,7 @@ export const firebaseConfig = {
     MyApp,
     HomePage,
     SignUpStudentPage,
+    SignUpDetailsPage,
     ProfilePage,
     LoginPage,
     TabsPage,
