@@ -1,9 +1,31 @@
 page-sign-up-parent {
 
+  p {
+    color: red;
+    font-size: 12px;
+    margin: 10px 0 -5px 16px;
+    transition: opacity 2s ease-in;
+  }
+
+  p.ios
+  {
+      margin: 0 0 0 16px;
+  }
+
+  .signup_button
+  {
+    margin: 32px auto 12px auto;
+    display: block;
+  }
   .backgroundIMG
   {
     background-image: url("https://image.ibb.co/iMY7Rk/background_polygons.png");
     background-size: cover;
   }
-  
+
+  .item
+  {
+    background-color: transparent;
+  }
+
 }

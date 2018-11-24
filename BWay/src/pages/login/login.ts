@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
 import { SignUpStudentPage } from '../sign-up-student/sign-up-student';
+import { SignUpParentPage } from '../sign-up-parent/sign-up-parent'
 import { FrgPasswordPage } from "../frg-password/frg-password";
 import { AuthService } from '../../providers/auth-service/auth-service';
 import { TabsPages} from '../tabs/tabs'
