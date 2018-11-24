@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
+import { SignUpStudentPage } from '../sign-up-student/sign-up-student'
+
 
 /**
  * Generated class for the LoginPage page.
@@ -27,11 +29,11 @@ export class LoginPage {
   }
 
   goToHomePage(){
-    
+
   }
 
-  goToRegisterPage(){
-
+  goToSignUpStudentPage(){
+    this.navCtrl.push(SignUpStudentPage);
   }
 
   goToForgottenPasswordPage(){

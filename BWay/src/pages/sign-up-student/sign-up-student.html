@@ -7,12 +7,38 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>SignUp-Student</ion-title>
+    <ion-title>SignUpStudent</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="backgroundIMG">
 
+  <form [formGroup]="SignUpForm">
+    <ion-item>
+      <ion-label floating>First Name</ion-label>
+      <ion-input type="text" formControlName="fcfname" [(ngModel)]="fname"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Last Name</ion-label>
+      <ion-input type="text" formControlName="fclname" [(ngModel)]="lname" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="email" formControlName="fcemail" [(ngModel)]="SignUpEmail" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" formControlName="fcpass" [(ngModel)]="SignUpPass" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Confirm Password</ion-label>
+      <ion-input type="password" formControlName="fcpass2" [(ngModel)]="pass2" ></ion-input>
+    </ion-item>
+
+  </form>
+
+  <button class="register_button" ion-button color="primary" outline round (click)="goToHomePage()">Register</button>
+  <button class="col" ion-button color="primary" clear (click)="goToLoginPage()">Do you already have an account?</button>
 </ion-content>
