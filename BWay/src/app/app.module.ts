@@ -12,7 +12,9 @@ import { HomePage } from '../pages/home/home';
 import { SignUpStudentPage } from '../pages/sign-up-student/sign-up-student'
 import { LoginPage } from '../pages/login/login';
 import { TabsPage } from '../pages/tabs/tabs';
-import { ProfilePage } from '../pages/profile/profile'
+import { ProfilePage } from '../pages/profile/profile';
+import { FrgPasswordPage } from "../pages/frg-password/frg-password";
+
 
 export const firebaseConfig = {
   apiKey: "AIzaSyAEm_npBxolAXgfj4Muwae7AwEuZISsPzQ",
@@ -29,7 +31,8 @@ export const firebaseConfig = {
     SignUpStudentPage,
     LoginPage,
     ProfilePage,
-    TabsPage
+    TabsPage,
+    FrgPasswordPage
   ],
   imports: [
     BrowserModule,
@@ -45,7 +48,8 @@ export const firebaseConfig = {
     SignUpStudentPage,
     ProfilePage,
     LoginPage,
-    TabsPage
+    TabsPage,
+    FrgPasswordPage
   ],
   providers: [
     StatusBar,

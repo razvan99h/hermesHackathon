@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
-import { SignUpStudentPage } from '../sign-up-student/sign-up-student'
+import { SignUpStudentPage } from '../sign-up-student/sign-up-student';
+import { FrgPasswordPage } from "../frg-password/frg-password";
 
 
 /**
@@ -16,6 +17,8 @@ import { SignUpStudentPage } from '../sign-up-student/sign-up-student'
   templateUrl: 'login.html',
 })
 export class LoginPage {
+  email;
+  pass;
 
   constructor(
     public navCtrl: NavController,
@@ -29,7 +32,7 @@ export class LoginPage {
   }
 
   goToHomePage(){
-
+    console.log(this.email, this.pass);
   }
 
   goToSignUpStudentPage(){
@@ -37,7 +40,7 @@ export class LoginPage {
   }
 
   goToForgottenPasswordPage(){
-
+    this.navCtrl.push(FrgPasswordPage);
   }
 
   loginWithFacebook(){
