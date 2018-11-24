@@ -7,12 +7,51 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>SignUp-Parent</ion-title>
+    <ion-title>SignUpParent</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="backgroundIMG">
 
-</ion-content>
+  <form>
+    <ion-item>
+      <ion-label floating>First Name</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Last Name</ion-label>
+      <ion-input type="text" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Confirm Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Phone Number (opt)</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Payment</ion-label>
+      <ion-select [(ngModel)]="payment">
+        <ion-option value="card">Card</ion-option>
+        <ion-option value="addlater">Add Later</ion-option>
+      </ion-select>
+    </ion-item>
+
+
+  </form>
+
+  <button class="signup_button" ion-button color="primary" outline round (click) = "goToSignUpDetailsPage()" >Register</button>
+  <button class="col" ion-button color="primary" clear (click) = "goToLoginPage()">Do you already have an account?</button>
+
+  </ion-content>
