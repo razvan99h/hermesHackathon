@@ -18,7 +18,17 @@ import { LoginPage } from '../login/login'
 })
 export class SignUpStudentPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  firstName = ""
+  lastName = ""
+  email = ""
+  passwordSignUp = ""
+  passwordSignUp2 = ""
+
+  student;
+
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
@@ -26,8 +36,26 @@ export class SignUpStudentPage {
   }
 
   goToSignUpDetailsPage(){
-
-    this.navCtrl.push( SignUpDetailsPage )
+    this.student = {
+      "data" : {
+            "birth_date" : "",
+            "email" : this.email,
+            "faculty" : "",
+            "gender" : "",
+            "location" : "",
+            "first_name" : this.firstName,
+            "last_name" : this.lastName,
+            "payment" : "",
+            "phone" : "",
+            "rating" : "",
+            "self_description" : "",
+            "subject" : "",
+            "level" : ""
+          },
+  		"type" : "student"
+    };
+    console.log(this.student)
+    this.navCtrl.push( SignUpDetailsPage, {"student" : this.student} )
   }
 
   goToLoginPage(){

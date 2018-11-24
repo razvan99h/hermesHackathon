@@ -17,7 +17,15 @@ import { LoginPage } from '../login/login'
 })
 export class SignUpParentPage {
 
+  firstName;
+  lastName;
+  email;
+  passwordSignUp;
+  passwordSignUp2;
+  phoneNumber;
   payment = ""
+
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 

@@ -17,26 +17,26 @@
 
   <ion-item>
     <ion-label floating>First Name</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)] = "firstName"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label floating>Last Name</ion-label>
-    <ion-input type="text" ></ion-input>
+    <ion-input type="text" [(ngModel)] = "lastName"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label floating>Email</ion-label>
+    <ion-label floating [(ngModel)] = "email">Email</ion-label>
     <ion-input type="email"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label floating>Password</ion-label>
+    <ion-label floating [(ngModel)] = "passwordSignUp">Password</ion-label>
     <ion-input type="password"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label floating>Confirm Password</ion-label>
+    <ion-label floating [(ngModel)] = "passwordSignUp2">Confirm Password</ion-label>
     <ion-input type="password"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label floating>Phone Number (opt)</ion-label>
+    <ion-label floating [(ngModel)] = "phoneNumber">Phone Number (opt)</ion-label>
     <ion-input type="text"></ion-input>
   </ion-item>
   <ion-item>

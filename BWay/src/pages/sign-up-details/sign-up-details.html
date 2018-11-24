@@ -16,23 +16,31 @@
 <ion-content padding class="backgroundIMG">
 
   <ion-item>
-    <ion-label floating>Gender</ion-label>
+    <ion-label floating >Gender</ion-label>
     <ion-select [(ngModel)]="gender">
       <ion-option value="male">Male</ion-option>
       <ion-option value="female">Female</ion-option>
     </ion-select>
   </ion-item>
   <ion-item>
-    <ion-label floating>Location</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-label floating >Location</ion-label>
+    <ion-input type="text" [(ngModel)] = "location"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label floating>Phone</ion-label>
-    <ion-input type="text" ></ion-input>
+    <ion-label floating >Phone</ion-label>
+    <ion-input type="text" [(ngModel)] = "phone"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label floating>Faculty</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-label floating >Faculty</ion-label>
+    <ion-input type="text" [(ngModel)] = "faculty"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating >Birth Date</ion-label>
+    <ion-input type="text" [(ngModel)] = "birthDate"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating >Self Description</ion-label>
+    <ion-input type="text" [(ngModel)] = "selfDescription"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label floating>Payment</ion-label>
@@ -69,8 +77,8 @@
   </ion-item>
 
   <div class="flex">
-    <button class="buttons" ion-button color="primary" outline round >Skip</button>
-    <button class="buttons" ion-button color="primary" outline round >Done</button>
+    <button class="buttons" ion-button color="primary" outline round (click) = "goToHomePage()" >Skip</button>
+    <button class="buttons" ion-button color="primary" outline round (click) = "goToHomePage()" >Done</button>
   </div>
 
   </ion-content>
