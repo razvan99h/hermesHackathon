@@ -10,6 +10,7 @@ import { AuthService } from '../providers/auth-service/auth-service';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { BeforeSignUpPage } from '../pages/before-sign-up/before-sign-up';
 import { SignUpStudentPage } from '../pages/sign-up-student/sign-up-student'
 import { SignUpDetailsPage } from '../pages/sign-up-details/sign-up-details'
 import { SignUpParentPage } from '../pages/sign-up-parent/sign-up-parent'
@@ -31,6 +32,7 @@ export const firebaseConfig = {
   declarations: [
     MyApp,
     HomePage,
+    BeforeSignUpPage,
     SignUpStudentPage,
     SignUpDetailsPage,
     SignUpParentPage,
@@ -50,6 +52,7 @@ export const firebaseConfig = {
   entryComponents: [
     MyApp,
     HomePage,
+    BeforeSignUpPage,
     SignUpStudentPage,
     SignUpDetailsPage,
     SignUpParentPage,
