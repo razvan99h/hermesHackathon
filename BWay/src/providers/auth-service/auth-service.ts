@@ -24,6 +24,11 @@ export class AuthService {
     return this.afAuth.auth.createUserWithEmailAndPassword(newEmail, newPass);
   }
 
+  logout()
+  {
+    this.afAuth.auth.signOut();
+  }
+
   isLogged()
   {
       this.afAuth.authState.subscribe(state =>{

@@ -40,7 +40,6 @@ export class LoginPage {
   goToHomePage(){
     console.log(this.email, this.pass);
     this.authService.login_user(this.email, this.pass).then((response) => {
-        this.navCtrl.push(TabsPage)
         console.log(response);
       }, (error) =>{
         //this.invalidEmailPassAlert();
