@@ -19,11 +19,24 @@
   <p class="top_question">
     What are you looking for, NUME?
   </p>
+  <ion-content class="card-background-page" >
 
-  <p>Private Lessons</p>
-  <img src="assets/imgs/teacher.png" class="size" (click) = "goToConsultationsPage('private_lessons')">
-  <div class="line"></div>
-  <p>Career Orientation</p>
-  <img src="assets/imgs/choose.png" class="size" (click) = "goToConsultationsPage('career_orientation')">
+    <div >
+      <ion-card (click) = "goToConsultationsPage('career_orientation')">
+        <img src="assets/imgs/career.png" class="black"/>
+        <div class="card-title">Career Orientation</div>
+        <div class="card-subtitle">for your child</div>
+      </ion-card>
+    </div>
+    <p class="space">
+
+    </p>
+    <ion-card class="black" (click) = "goToConsultationsPage('private_lessons')">
+      <img src="assets/imgs/private_lessons2.png" />
+      <div class="card-title">Private lessons</div>
+      <div class="card-subtitle">in many disciplines</div>
+    </ion-card>
+  </ion-content>
+
 
 </ion-content>

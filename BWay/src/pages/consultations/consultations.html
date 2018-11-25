@@ -15,7 +15,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="backgroundIMG">
   <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
 
 
@@ -35,7 +35,7 @@
         <img src="assets/imgs/graduate.png">
       </ion-avatar>
       <h2>{{student.data.first_name}} {{student.data.last_name}}</h2>
-      <p>{{student.location}}, {{student.data.faculty}}</p>
+      <p class="location">{{student.data.location}}, {{student.data.faculty}}</p>
     </ion-item>
 
     <div class="rating">

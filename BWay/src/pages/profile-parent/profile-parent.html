@@ -8,6 +8,11 @@
 
   <ion-navbar>
     <ion-title>My Account</ion-title>
+  <ion-buttons right class="padd">
+       <button ion-button icon-only class="share_button" >
+          <ion-icon name="create"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -24,7 +29,7 @@
     </ion-item>
     <ion-item>
       <ion-label class = "stacked_title" stacked> Email </ion-label>
-      <ion-label class = "stacked_title nomargin">{{accemail}}</ion-label>
+      <ion-label class = "stacked_title nomargin">{{email}}</ion-label>
     </ion-item>
     <ion-item>
       <ion-label class = "stacked_title" stacked> Phone Number </ion-label>

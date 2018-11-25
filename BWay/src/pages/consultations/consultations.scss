@@ -10,6 +10,14 @@ page-consultations {
     position: relative;
   }
   .position div{
-    padding-top: 10px;
+    padding-top: 8px;
+    position: absolute;right:16px;
+  }
+  .button
+  {
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 0;
+    font-size: 12px;
   }
 }

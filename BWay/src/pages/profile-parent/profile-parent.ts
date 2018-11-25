@@ -21,6 +21,7 @@ export class ProfileParentPage {
   public lastName : string
   public phone : string
   public payment : string
+  public email : string;
   constructor(public navCtrl: NavController, public navParams: NavParams, public authService : AuthService, public database: DatabaseProvider) {
     this.database.getDataParent().subscribe(data =>{
     this.parent = data
@@ -28,6 +29,7 @@ export class ProfileParentPage {
     this.lastName = this.parent.lastName
     this.phone = this.parent.phone
     this.payment = this.parent.payment
+    this.email = this.parent.email
     console.log(this.parent)
     })
   }
