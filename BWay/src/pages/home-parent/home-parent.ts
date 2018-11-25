@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ConsultationsPage } from "../consultations/consultations";
 
 /**
  * Generated class for the HomeParentPage page.
@@ -21,5 +22,7 @@ export class HomeParentPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomeParentPage');
   }
-
+  goToConsultationsPage(cameFrom){
+    this.navCtrl.push(ConsultationsPage, {'cameFrom': cameFrom})
+  }
 }
