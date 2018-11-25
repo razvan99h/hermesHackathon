@@ -19,7 +19,8 @@ export class HomeParentPage {
   name
   constructor(public navCtrl: NavController, public navParams: NavParams, public database : DatabaseProvider) {
     this.database.getName().subscribe(data =>{
-      this.name = data.firstName + " " + data.lastName
+      this.name = data.lastName
+      console.log(this.name)
     })
   }
 

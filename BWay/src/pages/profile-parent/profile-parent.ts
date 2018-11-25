@@ -37,7 +37,9 @@ export class ProfileParentPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProfileParentPage');
   }
-
+  addChild(){
+    
+  }
   logOut()
   {
     this.authService.logout()

@@ -7,7 +7,16 @@ page-profile-parent {
       height: auto;
       align-content: center;
   }
-
+  .flex
+  {
+      display: flex;
+  }
+  .buttons
+  {
+      //width:150px;
+      margin: 0 10px;
+      flex:1;
+  }
   .item
   {
     padding: 0 16px;
@@ -26,7 +35,7 @@ page-profile-parent {
 
   .logout_button
   {
-    margin: 12px auto 12px auto;
+    /*margin: 12px auto 12px auto;*/
     display: block;
   }
 
