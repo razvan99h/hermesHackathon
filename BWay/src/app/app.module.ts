@@ -9,7 +9,8 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthService } from '../providers/auth-service/auth-service';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { HomePage } from '../pages/home/home';HomeParentPage
+import { HomeParentPage } from '../pages/home-parent/home-parent';
 import { BeforeSignUpPage } from '../pages/before-sign-up/before-sign-up';
 import { SignUpStudentPage } from '../pages/sign-up-student/sign-up-student'
 import { SignUpDetailsPage } from '../pages/sign-up-details/sign-up-details'
@@ -20,7 +21,8 @@ import { ProfilePage } from '../pages/profile/profile';
 import { FrgPasswordPage } from "../pages/frg-password/frg-password";
 import { DatabaseProvider } from '../providers/database/database';
 import { AddChildPage } from '../pages/add-child/add-child'
-
+import { InboxPage } from "../pages/inbox/inbox";
+import { CalendarPage } from "../pages/calendar/calendar";
 
 export const firebaseConfig = {
   apiKey: "AIzaSyAEm_npBxolAXgfj4Muwae7AwEuZISsPzQ",
@@ -34,6 +36,7 @@ export const firebaseConfig = {
   declarations: [
     MyApp,
     HomePage,
+    HomeParentPage,
     BeforeSignUpPage,
     SignUpStudentPage,
     SignUpDetailsPage,
@@ -42,7 +45,9 @@ export const firebaseConfig = {
     ProfilePage,
     TabsPages,
     FrgPasswordPage,
-    AddChildPage
+    AddChildPage,
+    InboxPage,
+    CalendarPage
   ],
   imports: [
     BrowserModule,
@@ -55,6 +60,7 @@ export const firebaseConfig = {
   entryComponents: [
     MyApp,
     HomePage,
+    HomeParentPage,
     BeforeSignUpPage,
     SignUpStudentPage,
     SignUpDetailsPage,
@@ -63,7 +69,9 @@ export const firebaseConfig = {
     LoginPage,
     TabsPages,
     FrgPasswordPage,
-    AddChildPage
+    AddChildPage,
+    InboxPage,
+    CalendarPage
   ],
   providers: [
     StatusBar,
