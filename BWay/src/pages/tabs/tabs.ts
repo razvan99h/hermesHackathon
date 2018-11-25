@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { HomeParentPage } '../home-parent/home-parent'
-import { CalendarPage } '../calendar/calendar'
-import { InboxPage } '../inbox/inbox'
+import { HomeParentPage } from '../home-parent/home-parent'
+import { CalendarPage } from '../calendar/calendar'
+import { InboxPage } from '../inbox/inbox'
 import { ProfileStudentPage } from '../profile-student/profile-student';
 
 @Component({
