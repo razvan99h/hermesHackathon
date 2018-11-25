@@ -26,7 +26,7 @@ page-profile-student {
 
   .logout_button
   {
-    margin: 32px auto 12px auto;
+    margin: 12px auto 12px auto;
     display: block;
   }
 
@@ -36,4 +36,16 @@ page-profile-student {
     background-size: cover;
   }
 
+  .rating{
+      margin: 0 25%;
+      width: 50%;
+  }
+  p.rating-text{
+    text-align: center;
+    margin: 0  0 10px 0;
+  }
+  .label{
+    height: 20px;
+    margin-bottom: 5px;
+  }
 }

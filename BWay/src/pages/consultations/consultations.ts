@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ShowStudentPage } from "../show-student/show-student";
 
 /**
  * Generated class for the ConsultationsPage page.
@@ -28,7 +29,9 @@ export class ConsultationsPage {
 
   goToStudentProfile()
   {
-    console.log("aici merge Raul")
+
+
+    this.navCtrl.push(ShowStudentPage)
   }
 
 }

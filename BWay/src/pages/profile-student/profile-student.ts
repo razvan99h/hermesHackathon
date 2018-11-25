@@ -20,7 +20,7 @@ export class ProfileStudentPage {
   public student
   public firstName : string
   public lastName : string
-  public birthDay : string
+  public birthDate : string
   public accemail : string
   public faculty : string
   public gender : string
@@ -30,12 +30,15 @@ export class ProfileStudentPage {
   public selfDescription : string
   public subject : string
   public rating : string
+  name;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public authService : AuthService, public database: DatabaseProvider) {
     this.database.getDataStudent().subscribe(data =>{
     this.student = data
     this.firstName = this.student.first_name
     this.lastName = this.student.last_name
+    this.name = this.firstName + ' ' + this.lastName
+    this.birthDate = this.student.birth_date
     this.accemail = this.student.email
     this.faculty = this.student.faculty
     this.gender = this.student.gender
