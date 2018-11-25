@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AuthService } from '../../providers/auth-service/auth-service'
 import { DatabaseProvider } from '../../providers/database/database'
+import { AddChildPage } from '../add-child/add-child'
 
 /**
  * Generated class for the ProfilePage page.
@@ -31,8 +32,9 @@ export class ProfilePage {
 
   addStudent()
   {
-    console.log(this.authService.getUserToken())
-    this.database.addStudent({})
+    this.database.getDataStudent().subscribe(data => {
+      console.log(data)
+    })
 
   }
 }

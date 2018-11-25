@@ -41,4 +41,10 @@ export class DatabaseProvider {
     this.item = this.db.object(path)
     this.item.update(child)
   }
+
+  getDataStudent()
+  {
+    var path = "/users/" + this.authService.getUserToken() + "/data"
+    return this.item = this.db.object(path).valueChanges()
+  }
 }
