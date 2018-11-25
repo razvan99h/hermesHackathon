@@ -15,36 +15,39 @@
 
 <ion-content padding>
   <p>
-    You will create a consultation with NAME for DISCIPLINE.
-    The price will be PRICE
+    You will create a consultation with {{name}} for {{discipline}}.
+    The price will be {{price}}
   </p>
   <ion-item>
-    <ion-label floating>Choose a child</ion-label>
-    <ion-select>
-      <ion-option value="mathematics">copil1</ion-option>
-    </ion-select>
+    <ion-label floating >Choose a child</ion-label>
+      <ion-select [(ngModel)]="childID">
+        <div *ngFor="let child of listOfChildrens; let i = index">
+          <ion-option value={{child.id}}> {{child.date.name}}</ion-option>
+        </div>
+      </ion-select>
+
   </ion-item>
   <ion-item>
     <ion-label floating >Date</ion-label>
-    <ion-input type="text" ></ion-input>
+    <ion-input type="text" [(ngModel)] = "date" ></ion-input>
   </ion-item>
   <ion-item>
     <ion-label floating >Time</ion-label>
-    <ion-input type="text" ></ion-input>
+    <ion-input type="text" [(ngModel)] = "time"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label floating >Duration</ion-label>
-    <ion-input type="text" ></ion-input>
+    <ion-input type="text" [(ngModel)] = "duration" ></ion-input>
   </ion-item>
   <p>
       Please aknowledge ....
   </p>
   <div class="flex">
-    <button ion-button icon-start class="buttons" round >
+    <button ion-button icon-start class="buttons" round (click) = "canceButton()" >
        Cancel
     </button>
 
-    <button ion-button icon-start class="buttons" round >
+    <button ion-button icon-start class="buttons" round (click) = "goToHomePage()">
       Send request
     </button>
   </div>

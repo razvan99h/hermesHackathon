@@ -59,4 +59,25 @@ export class DatabaseProvider {
     var path = "/users"
     return this.db.object(path).valueChanges()
   }
+
+  getAllChildrens()
+  {
+    var path = "/users/" + this.authService.getUserToken() + "/childrens"
+    return this.db.object(path).valueChanges()
+  }
+
+  addConsultation(object)
+  {
+    var path = "/consultations"
+    this.db.list(path).push(object).then((response) =>
+    {
+      console.log(response)
+      console.log(response.path.pieces_[1])
+      var key = response.path.pieces_[1]
+      path = "/users/" + this.authService.getUserToken() + "/consultationID/"
+      this.db.object(path).update({[key]:"true"})
+      path = "/users/" + object.id_student + "/consultationsID"
+      this.db.object(path).update({[key]:"true"})
+    })
+  }
 }
