@@ -25,7 +25,9 @@ export class SignUpDetailsPage {
   location = ""
   birthDate = ""
   selfDescription = ""
-
+  minSchoolYear = ""
+  maxSchoolYear = ""
+  discipline = ""
 
 
   constructor(public navCtrl: NavController,
@@ -49,6 +51,10 @@ export class SignUpDetailsPage {
     this.student.data.location = this.location
     this.student.data.level = this.level
     this.student.data.subject = this.subject
+    if(this.subject != career)
+      this.student.data.subject = this.discipline
+    this.student.data.max_school_year = this.maxSchoolYear
+    this.student.data.min_school_year = this.minSchoolYear
     this.authService.signupUser(this.student.data.email, this.student.data.pass).then(data =>
     {
       this.databaseProvider.addStudent(this.student)
@@ -56,6 +62,9 @@ export class SignUpDetailsPage {
 
 
     console.log(this.student)
+  }
+  parseInteger(str){
+    return Number(str)
   }
 
 }
