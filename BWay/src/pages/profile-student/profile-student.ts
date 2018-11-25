@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AuthService } from '../../providers/auth-service/auth-service'
 import { DatabaseProvider } from '../../providers/database/database'
-import { AddChildPage } from '../add-child/add-child'
 import { StarRatingModule } from 'ionic3-star-rating';
 /**
  * Generated class for the ProfileStudentPage page.

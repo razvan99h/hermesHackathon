@@ -1,0 +1,39 @@
+page-profile-parent {
+  .sizenew
+  {
+      margin: 8% auto;
+      display: block;
+      width: 140px;
+      height: auto;
+      align-content: center;
+  }
+
+  .item
+  {
+    padding: 0 16px;
+    background-color: transparent;
+  }
+
+  .label[stacked]
+  {
+    font-size: 12px;
+    color: #8e8e8e;
+  }
+
+  .nomargin{
+    margin: 5px 8px 13px 0;
+  }
+
+  .logout_button
+  {
+    margin: 32px auto 12px auto;
+    display: block;
+  }
+
+  .backgroundIMG
+  {
+    background-image: url("https://image.ibb.co/iMY7Rk/background_polygons.png");
+    background-size: cover;
+  }
+
+}

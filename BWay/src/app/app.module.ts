@@ -20,6 +20,7 @@ import { SignUpParentPage } from '../pages/sign-up-parent/sign-up-parent'
 import { LoginPage } from '../pages/login/login';
 import { TabsPages } from '../pages/tabs/tabs';
 import { ProfileStudentPage } from '../pages/profile-student/profile-student';
+import { ProfileParentPage } from '../pages/profile-parent/profile-parent';
 import { FrgPasswordPage } from "../pages/frg-password/frg-password";
 import { DatabaseProvider } from '../providers/database/database';
 import { AddChildPage } from '../pages/add-child/add-child'
@@ -46,6 +47,7 @@ export const firebaseConfig = {
     SignUpParentPage,
     LoginPage,
     ProfileStudentPage,
+    ProfileParentPage,
     TabsPages,
     FrgPasswordPage,
     AddChildPage,
@@ -71,6 +73,7 @@ export const firebaseConfig = {
     SignUpDetailsPage,
     SignUpParentPage,
     ProfileStudentPage,
+    ProfileParentPage,
     LoginPage,
     TabsPages,
     FrgPasswordPage,
