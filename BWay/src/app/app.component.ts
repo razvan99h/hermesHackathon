@@ -8,6 +8,7 @@ import { HomeParentPage } from '../pages/home-parent/home-parent';
 import { LoginPage } from '../pages/login/login'
 import { TabsPages } from '../pages/tabs/tabs'
 import { TabsStudentPages} from "../pages/tabs-student/tabs-student";
+import { DatabaseProvider} from "../providers/database/database"
 
 @Component({
   templateUrl: 'app.html'
@@ -15,13 +16,20 @@ import { TabsStudentPages} from "../pages/tabs-student/tabs-student";
 export class MyApp {
   rootPage:any;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public afAuth : AngularFireAuth) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public afAuth : AngularFireAuth, public database: DatabaseProvider) {
     platform.ready().then(() => {
       setTimeout( () =>{
         this.afAuth.authState.subscribe(user =>
         {
           if(user)
-            this.rootPage = TabsStudentPages; //aici sa schimbe Raul
+          {
+            this.database.getType().subscribe(data => {
+              if(data == "parent")
+                this.rootPage = TabsPages
+              else
+                this.rootPage = TabsStudentPages;
+            })
+          }
           else
             this.rootPage = LoginPage;
         });

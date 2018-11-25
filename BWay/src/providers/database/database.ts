@@ -80,4 +80,10 @@ export class DatabaseProvider {
       this.db.object(path).update({[key]:"true"})
     })
   }
+
+  getType()
+  {
+    var path = "/users/" + this.authService.getUserToken() + "/type"
+    return this.db.object(path).valueChanges()
+  }
 }
