@@ -22,7 +22,7 @@ export class ProfileParentPage {
   public phone : string
   public payment : string
   constructor(public navCtrl: NavController, public navParams: NavParams, public authService : AuthService, public database: DatabaseProvider) {
-    this.database.getDataParent.subscribe(data =>{
+    this.database.getDataParent().subscribe(data =>{
     this.parent = data
     this.firstName = this.parent.firstName
     this.lastName = this.parent.lastName

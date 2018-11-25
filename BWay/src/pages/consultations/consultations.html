@@ -19,6 +19,14 @@
   <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
 
 
+
+  <button ion-button icon-start clear small (click)="goToAddChild()">
+    <ion-icon name="clipboard"></ion-icon>
+    Add Child
+  </button>
+
+
+
   <div *ngFor="let student of studentsToShow; let i = index">
   <ion-card (click)="goToStudentProfile(student)">
 
@@ -26,31 +34,44 @@
       <ion-avatar item-start>
         <img src="assets/imgs/graduate.png">
       </ion-avatar>
-      <h2>Marty McFly</h2>
-      <p>November 5, 1955</p>
+      <h2>{{student.data.first_name}} {{student.data.last_name}}</h2>
+      <p>{{student.location}}, {{student.data.faculty}}</p>
     </ion-item>
 
+    <div class="rating">
+      <ionic3-star-rating
+        activeIcon = "ios-star"
+        defaultIcon = "ios-star-outline"
+        activeColor = "#ffff33"
+        defaultColor = "#808080"
+        size = "80px"
+        readonly="true"
+        [rating]="this.studentsToShow[i].data.rating"
+        >
+      </ionic3-star-rating>
+    </div>
 
     <ion-card-content>
-      <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+      <p>{{student.data.self_description}}</p>
     </ion-card-content>
 
     <ion-row>
+
       <ion-col>
         <button ion-button icon-start clear small>
-          <ion-icon name="thumbs-up"></ion-icon>
-          <div>12 Likes</div>
+          <ion-icon name="clipboard"></ion-icon>
+          <div>{{student.data.subject}}</div>
         </button>
       </ion-col>
       <ion-col>
         <button ion-button icon-start clear small>
-          <ion-icon name="text"></ion-icon>
-          <div>4 Comments</div>
+          <ion-icon name="podium" *ngIf="student.data.level != ''"></ion-icon>
+          <div>{{student.data.level}}</div>
         </button>
       </ion-col>
-      <ion-col center text-center>
-        <ion-note>
-          11h ago
+      <ion-col class="position">
+        <ion-note item-end >
+          <div>{{student.data.price}} ron</div>
         </ion-note>
       </ion-col>
     </ion-row>
