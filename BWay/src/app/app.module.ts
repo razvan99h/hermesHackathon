@@ -23,6 +23,7 @@ import { DatabaseProvider } from '../providers/database/database';
 import { AddChildPage } from '../pages/add-child/add-child'
 import { InboxPage } from "../pages/inbox/inbox";
 import { CalendarPage } from "../pages/calendar/calendar";
+import { MessagesPage } from "../pages/messages/messages"
 
 export const firebaseConfig = {
   apiKey: "AIzaSyAEm_npBxolAXgfj4Muwae7AwEuZISsPzQ",
@@ -47,7 +48,8 @@ export const firebaseConfig = {
     FrgPasswordPage,
     AddChildPage,
     InboxPage,
-    CalendarPage
+    CalendarPage,
+    MessagesPage
   ],
   imports: [
     BrowserModule,
@@ -71,7 +73,8 @@ export const firebaseConfig = {
     FrgPasswordPage,
     AddChildPage,
     InboxPage,
-    CalendarPage
+    CalendarPage,
+    MessagesPage
   ],
   providers: [
     StatusBar,
