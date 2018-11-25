@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 
-import { ProfilePage } from '../profile/profile';
+import { ProfileStudentPage } from '../profile-student/profile-student';
 
 @Component({
   templateUrl: 'tabs.html'
 })
 export class TabsPages {
 
-  tab1Root = ProfilePage;
-  tab2Root = ProfilePage;
-  tab3Root = ProfilePage;
+  tab1Root = ProfileStudentPage;
+  tab2Root = ProfileStudentPage;
+  tab3Root = ProfileStudentPage;
 
   constructor() {
 
