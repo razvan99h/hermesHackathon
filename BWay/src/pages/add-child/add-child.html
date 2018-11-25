@@ -15,12 +15,8 @@
 <ion-content padding class="backgroundIMG">
 
   <ion-item>
-    <ion-label floating>First Name</ion-label>
-    <ion-input type="text" [(ngModel)] = "firstName"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label floating>Last Name</ion-label>
-    <ion-input type="text" [(ngModel)] = "lastName"></ion-input>
+    <ion-label floating>Name</ion-label>
+    <ion-input type="text" [(ngModel)] = "name"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label floating >Gender</ion-label>
@@ -69,7 +65,7 @@
   </ion-item>
 
   <div class="flex">
-    <button class="buttons1" ion-button color="primary" outline round >Done</button>
+    <button class="buttons1" ion-button color="primary" outline round (click) = "AddChild()">Done</button>
     <button class="buttons2" ion-button color="primary" outline round >Add Another Child</button>
   </div>
 

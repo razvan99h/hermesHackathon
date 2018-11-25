@@ -54,7 +54,8 @@ export class CreateConsultationPage {
       "id_child" : this.childID,
       "duration" : this.duration,
       "date" : this.date,
-      "time" : this.time
+      "time" : this.time,
+      "subject": this.student.subject
     };
 
     this.database.addConsultation(object)

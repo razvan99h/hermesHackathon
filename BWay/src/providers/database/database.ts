@@ -30,16 +30,11 @@ export class DatabaseProvider {
     this.item.update(parent)
   }
 
-  addConsultation(consultation, parentID, studentID, childID)
+  addChild(child)
   {
-
-  }
-
-  addChild(child) 
-  {
-    var path = "/users/" + this.authService.getUserToken()
-    this.item = this.db.object(path)
-    this.item.update(child)
+    var path = "/users/" + this.authService.getUserToken() + "/childrens"
+    this.item = this.db.list(path)
+    this.item.push(child)
   }
 
   getDataStudent()
@@ -71,8 +66,6 @@ export class DatabaseProvider {
     var path = "/consultations"
     this.db.list(path).push(object).then((response) =>
     {
-      console.log(response)
-      console.log(response.path.pieces_[1])
       var key = response.path.pieces_[1]
       path = "/users/" + this.authService.getUserToken() + "/consultationID/"
       this.db.object(path).update({[key]:"true"})
@@ -84,6 +77,12 @@ export class DatabaseProvider {
   getType()
   {
     var path = "/users/" + this.authService.getUserToken() + "/type"
+    return this.db.object(path).valueChanges()
+  }
+
+  getName()
+  {
+    var path = "/users/" + this.authService.getUserToken() + "/data"
     return this.db.object(path).valueChanges()
   }
 }

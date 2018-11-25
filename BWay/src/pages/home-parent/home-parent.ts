@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ConsultationsPage } from "../consultations/consultations";
+import { DatabaseProvider} from "../../providers/database/database"
 
 /**
  * Generated class for the HomeParentPage page.
@@ -15,8 +16,11 @@ import { ConsultationsPage } from "../consultations/consultations";
   templateUrl: 'home-parent.html',
 })
 export class HomeParentPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  name
+  constructor(public navCtrl: NavController, public navParams: NavParams, public database : DatabaseProvider) {
+    this.database.getName().subscribe(data =>{
+      this.name = data.firstName + " " + data.lastName
+    })
   }
 
   ionViewDidLoad() {

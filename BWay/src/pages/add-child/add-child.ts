@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { DatabaseProvider } from '../../providers/database/database';
+import { TabsPages } from '../tabs/tabs'
 
 /**
  * Generated class for the AddChildPage page.
@@ -15,8 +17,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AddChildPage {
 
-  firstName = ""
-  lastName = ""
+  name = ""
   gender = ""
   birthDate = ""
   location = ""
@@ -24,11 +25,26 @@ export class AddChildPage {
   skills = ""
   schoolYear = ""
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public database : DatabaseProvider) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AddChildPage');
+
+  }
+
+  AddChild()
+  {
+    var obj={
+      gender : this.gender,
+      birth_date: this.birthDate,
+      name: this.name,
+      location: this.location,
+      phone: this.phoneNumber,
+      skills: this.skills,
+      schoolYear: this.schoolYear
+    }
+    this.database.addChild(obj)
+    this.navCtrl.push(TabsPages)
   }
 
 }
