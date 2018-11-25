@@ -29,7 +29,7 @@ export class SignUpDetailsPage {
   maxSchoolYear = ""
   discipline = ""
   phone = ""
-
+  price = ""
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -57,6 +57,7 @@ export class SignUpDetailsPage {
       this.student.data.subject = this.discipline
     this.student.data.max_school_year = this.maxSchoolYear
     this.student.data.min_school_year = this.minSchoolYear
+    this.student.data.price = this.price
     this.authService.signupUser(this.student.data.email, this.student.data.pass).then(data =>
     {
       this.databaseProvider.addStudent(this.student)

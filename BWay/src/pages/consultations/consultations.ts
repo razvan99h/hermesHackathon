@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DatabaseProvider} from '../../providers/database/database'
+import { ShowStudentPage } from "../show-student/show-student";
 
 /**
  * Generated class for the ConsultationsPage page.
@@ -53,6 +54,7 @@ export class ConsultationsPage {
   goToStudentProfile(student)
   {
     console.log(student)
+    this.navCtrl.push(ShowStudentPage, {"student":student})
   }
 
 }
