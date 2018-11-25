@@ -8,7 +8,7 @@
 
   <ion-navbar>
 
-    <img src="assets/imgs/logoBWay.png" class="bway_image">
+    <img src="assets/imgs/iconBWay.png" class="bway_image">
 
   </ion-navbar>
 
@@ -16,5 +16,14 @@
 
 
 <ion-content padding>
+  <p class="top_question">
+    What are you looking for, NUME?
+  </p>
+
+  <p>Private Lessons</p>
+  <img src="assets/imgs/teacher.png" class="size" (click) = "goToConsultationsPage('private_lessons')">
+  <div class="line"></div>
+  <p>Career Orientation</p>
+  <img src="assets/imgs/choose.png" class="size" (click) = "goToConsultationsPage('career_orientation')">
 
 </ion-content>

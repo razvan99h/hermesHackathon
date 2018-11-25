@@ -34,7 +34,7 @@ export class SignUpParentPage {
               public databaseProvider: DatabaseProvider) {
   }
 
-  ionViewDidLoad() {
+  ionViewDidLoad() { 
     console.log('ionViewDidLoad SignUpParentPage');
   }
 
