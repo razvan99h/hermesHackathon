@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DatabaseProvider} from '../../providers/database/database'
 import { ShowStudentPage } from "../show-student/show-student";
-import { AddChildPage } from "../add-child/add-child";
 
 /**
  * Generated class for the ConsultationsPage page.
@@ -25,7 +24,7 @@ export class ConsultationsPage {
     public database: DatabaseProvider) {
       this.cameFrom = navParams.get("cameFrom")
       this.database.getAllUsers().subscribe(users =>{
-        this.studentsToShow = this.sortBy(this.toListAllStudents(users))
+        this.studentsToShow = this.sortBy(this.toListAllStudents(users), this.camefrom)
 
       } )
   }
@@ -44,9 +43,33 @@ export class ConsultationsPage {
     return array
   }
 
-  sortBy(users)
+  sortBy(users, cameFrom)
   {
-    return users
+    var temp_list = []
+    for(let user in users)
+      if(users[user].type == "student")
+      {
+        if(cameFrom == "career")
+        {
+          if(users[user].data.subject == "career")
+          {
+            var obj = users[user]
+            obj.id = user
+            temp_list.push(obj)
+          }
+        }
+        else
+        {
+          if(users[user].data.subject != "career")
+          {
+            var obj = users[user]
+            obj.id = user
+            temp_list.push(obj)
+          }
+        }
+      }
+    console.log(temp_list, this.cameFrom)
+    return temp_list
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad ConsultationsPage');
@@ -57,9 +80,6 @@ export class ConsultationsPage {
     console.log(student)
     this.navCtrl.push(ShowStudentPage, {"student":student})
   }
-  goToAddChild()
-  {
-    this.navCtrl.push(AddChildPage) // Sa adauge raul aici parintele sa il trimita
-  }
+
 
 }

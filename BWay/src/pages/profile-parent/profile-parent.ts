@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AuthService } from '../../providers/auth-service/auth-service'
 import { DatabaseProvider } from '../../providers/database/database'
+import { AddChildPage } from "../add-child/add-child";
+
 
 /**
  * Generated class for the ProfileParentPage page.
@@ -37,8 +39,9 @@ export class ProfileParentPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProfileParentPage');
   }
-  addChild(){
-    
+  goToAddChild()
+  {
+    this.navCtrl.push(AddChildPage)
   }
   logOut()
   {

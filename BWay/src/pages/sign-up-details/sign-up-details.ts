@@ -53,7 +53,7 @@ export class SignUpDetailsPage {
     this.student.data.level = this.level
     this.student.data.subject = this.subject
     this.student.data.phone = this.phone
-    if(this.subject != this.career)
+    if(this.subject != "career")
       this.student.data.subject = this.discipline
     this.student.data.max_school_year = this.maxSchoolYear
     this.student.data.min_school_year = this.minSchoolYear

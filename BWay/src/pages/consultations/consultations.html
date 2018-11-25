@@ -19,9 +19,6 @@
   <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
 
 
-
-
-
   <div *ngFor="let student of studentsToShow; let i = index">
   <ion-card (click)="goToStudentProfile(student)">
 
