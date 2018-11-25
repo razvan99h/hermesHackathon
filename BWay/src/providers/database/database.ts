@@ -35,7 +35,7 @@ export class DatabaseProvider {
 
   }
 
-  addChild(child)
+  addChild(child) 
   {
     var path = "/users/" + this.authService.getUserToken()
     this.item = this.db.object(path)
@@ -51,7 +51,7 @@ export class DatabaseProvider {
   getDataParent()
   {
     var path = "/users/" + this.authService.getUserToken() + "/data"
-    return this.item = this.db.object(path)
+    return this.item = this.db.object(path).valueChanges()
   }
 
   getAllUsers()

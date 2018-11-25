@@ -21,7 +21,7 @@ export class MyApp {
         this.afAuth.authState.subscribe(user =>
         {
           if(user)
-            this.rootPage = TabsStudentPages; //aici sa schimbe Raul
+            this.rootPage = TabsPages; //aici sa schimbe Raul
           else
             this.rootPage = LoginPage;
         });

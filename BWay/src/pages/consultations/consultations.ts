@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DatabaseProvider} from '../../providers/database/database'
 import { ShowStudentPage } from "../show-student/show-student";
+import { AddChildPage } from "../add-child/add-child";
 
 /**
  * Generated class for the ConsultationsPage page.
@@ -39,7 +40,7 @@ export class ConsultationsPage {
         obj.id = user
         array.push(obj)
       }
-
+    console.log(array)
     return array
   }
 
@@ -55,6 +56,10 @@ export class ConsultationsPage {
   {
     console.log(student)
     this.navCtrl.push(ShowStudentPage, {"student":student})
+  }
+  goToAddChild()
+  {
+    this.navCtrl.push(AddChildPage) // Sa adauge raul aici parintele sa il trimita
   }
 
 }

@@ -26,7 +26,7 @@ page-profile-parent {
 
   .logout_button
   {
-    margin: 32px auto 12px auto;
+    margin: 12px auto 12px auto;
     display: block;
   }
 
@@ -34,6 +34,10 @@ page-profile-parent {
   {
     background-image: url("https://image.ibb.co/iMY7Rk/background_polygons.png");
     background-size: cover;
+  }
+  .label{
+    height: 20px;
+    margin-bottom: 5px;
   }
 
 }

@@ -2,11 +2,7 @@ page-login {
   ion-icon{
       color:white;
     }
-  .backgroundIMG
-  {
-    background-image: url("https://image.ibb.co/iMY7Rk/background_polygons.png");
-    background-size: cover;
-  }
+
   .size
   {
       margin: 20% 12% 5% 12%;
@@ -70,3 +66,8 @@ page-login {
 
   }
 }
+.backgroundIMG
+{
+  background-image: url("https://image.ibb.co/iMY7Rk/background_polygons.png");
+  background-size: cover;
+} 

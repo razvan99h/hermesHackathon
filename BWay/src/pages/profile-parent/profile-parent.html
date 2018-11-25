@@ -19,12 +19,8 @@
 
   <ion-list>
     <ion-item >
-      <ion-label class = "stacked_title" stacked> First Name </ion-label>
-      <ion-label class = "stacked_title nomargin">{{firstName}}</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label class = "stacked_title" stacked> Last Name </ion-label>
-      <ion-label class = "stacked_title nomargin">{{lastName}}</ion-label>
+      <ion-label class = "stacked_title" stacked> Name </ion-label>
+      <ion-label class = "stacked_title nomargin">{{firstName}} {{lastName}}</ion-label>
     </ion-item>
     <ion-item>
       <ion-label class = "stacked_title" stacked> Email </ion-label>
@@ -40,6 +36,6 @@
     </ion-item>
   </ion-list>
 
-  <button class="logout_button" ion-button color="primary" outline round (click) = "logOut()" >Logout</button>
+  <button class="logout_button" ion-button color="primary" round (click) = "logOut()" >Logout</button>
 
 </ion-content>
