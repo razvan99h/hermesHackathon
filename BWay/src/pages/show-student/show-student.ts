@@ -40,6 +40,11 @@ export class ShowStudentPage {
   }
 
   chooseStudent(){
+    try {
     this.navCtrl.push(CreateConsultationPage, {"student": this.student})
+    }
+    catch(e){
+      console.log(e)
+    }
   }
 }

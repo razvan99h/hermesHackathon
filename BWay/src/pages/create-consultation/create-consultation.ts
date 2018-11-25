@@ -30,18 +30,19 @@ export class CreateConsultationPage {
   duration
   constructor(public navCtrl: NavController, public navParams: NavParams, public database: DatabaseProvider, public authService : AuthService) {
     this.student = this.navParams.get("student")
-    console.log(this.student)
     this.name = this.student.data.first_name + " " + this.student.data.last_name
     this.discipline = this.student.data.subject
     this.price = this.student.data.price
     this.database.getAllChildrens().subscribe(data =>
     {
+      console.log(data)
       for(let i in data)
       {
         var object = data[i]
         object.id = i
         this.listOfChildrens.push(object)
       }
+      console.log(this.listOfChildrens)
     })
 
   }
@@ -54,7 +55,8 @@ export class CreateConsultationPage {
       "id_child" : this.childID,
       "duration" : this.duration,
       "date" : this.date,
-      "time" : this.time
+      "time" : this.time,
+      "subject": this.student.subject
     };
 
     this.database.addConsultation(object)

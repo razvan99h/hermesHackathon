@@ -22,7 +22,7 @@
     <ion-label floating >Choose a child</ion-label>
       <ion-select [(ngModel)]="childID">
         <div *ngFor="let child of listOfChildrens; let i = index">
-          <ion-option value={{child.id}}> {{child.date.name}}</ion-option>
+          <ion-option value={{child.id}}> {{child.name}} </ion-option>
         </div>
       </ion-select>
 
