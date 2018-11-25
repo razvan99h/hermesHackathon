@@ -28,6 +28,7 @@ export class SignUpDetailsPage {
   minSchoolYear = ""
   maxSchoolYear = ""
   discipline = ""
+  phone = ""
 
 
   constructor(public navCtrl: NavController,
@@ -51,7 +52,8 @@ export class SignUpDetailsPage {
     this.student.data.location = this.location
     this.student.data.level = this.level
     this.student.data.subject = this.subject
-    if(this.subject != career)
+    this.student.data.phone = this.phone
+    if(this.subject != this.career)
       this.student.data.subject = this.discipline
     this.student.data.max_school_year = this.maxSchoolYear
     this.student.data.min_school_year = this.minSchoolYear

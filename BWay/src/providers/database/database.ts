@@ -47,4 +47,10 @@ export class DatabaseProvider {
     var path = "/users/" + this.authService.getUserToken() + "/data"
     return this.item = this.db.object(path).valueChanges()
   }
+
+  getDataParent()
+  {
+    var path = "/users/" + this.authService.getUserToken() + "/data"
+    return this.item = this.db.object(path).valueChanges()
+  }
 }
