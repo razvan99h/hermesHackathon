@@ -1,0 +1,80 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>My Profile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class = "backgroundIMG">
+
+  <img src="assets/imgs/graduate.png" class="sizenew">
+
+  <ion-list>
+    <ion-item >
+      <ion-label class = "stacked_title" stacked> First Name </ion-label>
+      <ion-label class = "stacked_title nomargin">{{firstName}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class = "stacked_title" stacked> Last Name </ion-label>
+      <ion-label class = "stacked_title nomargin">{{lastName}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class = "stacked_title" stacked> Gender </ion-label>
+      <ion-label class = "stacked_title nomargin">{{gender}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class = "stacked_title" stacked> Birth Day </ion-label>
+      <ion-label class = "stacked_title nomargin">{{birthDay}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class = "stacked_title" stacked> Email </ion-label>
+      <ion-label class = "stacked_title nomargin">{{accemail}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class = "stacked_title" stacked> Phone Number </ion-label>
+      <ion-label class = "stacked_title nomargin">{{phone}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class = "stacked_title" stacked> Location </ion-label>
+      <ion-label class = "stacked_title nomargin">{{location}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class = "stacked_title" stacked> Faculty </ion-label>
+      <ion-label class = "stacked_title nomargin">{{faculty}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class = "stacked_title" stacked> Self Descripiton </ion-label>
+      <ion-label class = "stacked_title nomargin">{{selfDescription}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class = "stacked_title" stacked> Subject </ion-label>
+      <ion-label class = "stacked_title nomargin">{{subject}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class = "stacked_title" stacked> Level </ion-label>
+      <ion-label class = "stacked_title nomargin">{{level}}</ion-label>
+    </ion-item>
+    <ion-item>
+      Rating:
+      <ionic3-star-rating
+        activeIcon = "ios-star"
+        defaultIcon = "ios-star-outline"
+        activeColor = "#ffff33"
+        defaultColor = "#808080"
+        readonly="true"
+        [rating]="this.rating">
+      </ionic3-star-rating>
+    </ion-item>
+  </ion-list>
+
+  <button class="logout_button" ion-button color="primary" outline round (click) = "logOut()" >Logout</button>
+
+</ion-content>

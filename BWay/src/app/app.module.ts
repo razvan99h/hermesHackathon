@@ -7,6 +7,8 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthService } from '../providers/auth-service/auth-service';
+import { StarRatingModule } from 'ionic3-star-rating';
+
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';HomeParentPage
@@ -17,14 +19,14 @@ import { SignUpDetailsPage } from '../pages/sign-up-details/sign-up-details'
 import { SignUpParentPage } from '../pages/sign-up-parent/sign-up-parent'
 import { LoginPage } from '../pages/login/login';
 import { TabsPages } from '../pages/tabs/tabs';
-import { ProfilePage } from '../pages/profile/profile';
+import { ProfileStudentPage } from '../pages/profile-student/profile-student';
 import { FrgPasswordPage } from "../pages/frg-password/frg-password";
 import { DatabaseProvider } from '../providers/database/database';
 import { AddChildPage } from '../pages/add-child/add-child'
 import { InboxPage } from "../pages/inbox/inbox";
 import { CalendarPage } from "../pages/calendar/calendar";
+import { MessagesPage } from "../pages/messages/messages";
 import { ConsultationsPage } from "../pages/consultations/consultations";
-
 
 export const firebaseConfig = {
   apiKey: "AIzaSyAEm_npBxolAXgfj4Muwae7AwEuZISsPzQ",
@@ -44,37 +46,40 @@ export const firebaseConfig = {
     SignUpDetailsPage,
     SignUpParentPage,
     LoginPage,
-    ProfilePage,
+    ProfileStudentPage,
     TabsPages,
     FrgPasswordPage,
     AddChildPage,
     InboxPage,
     CalendarPage,
-    ConsultationsPage
+    ConsultationsPage,
+    MessagesPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    StarRatingModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
     HomeParentPage,
-    BeforeSignUpPage,
+    BeforeSignUpPage, 
     SignUpStudentPage,
     SignUpDetailsPage,
     SignUpParentPage,
-    ProfilePage,
+    ProfileStudentPage,
     LoginPage,
     TabsPages,
     FrgPasswordPage,
     AddChildPage,
     InboxPage,
     CalendarPage,
+    MessagesPage,
     ConsultationsPage
   ],
   providers: [

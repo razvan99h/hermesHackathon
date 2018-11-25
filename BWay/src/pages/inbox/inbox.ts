@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { MessagesPage } from '../messages/messages'
 
 /**
  * Generated class for the InboxPage page.
@@ -20,6 +21,11 @@ export class InboxPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad InboxPage');
+  }
+
+  goToMessages()
+  {
+    this.navCtrl.push(MessagesPage)
   }
 
 }
