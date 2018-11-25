@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { HomeParentPage } from '../pages/home-parent/home-parent';
 import { LoginPage } from '../pages/login/login'
 import { TabsPages } from '../pages/tabs/tabs'
+import { TabsStudentPages} from "../pages/tabs-student/tabs-student";
 
 @Component({
   templateUrl: 'app.html'
@@ -20,7 +21,7 @@ export class MyApp {
         this.afAuth.authState.subscribe(user =>
         {
           if(user)
-            this.rootPage = TabsPages;
+            this.rootPage = TabsStudentPages; //aici sa schimbe Raul
           else
             this.rootPage = LoginPage;
         });

@@ -11,7 +11,7 @@ import { StarRatingModule } from 'ionic3-star-rating';
 
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';HomeParentPage
+import { HomePage } from '../pages/home/home';
 import { HomeParentPage } from '../pages/home-parent/home-parent';
 import { BeforeSignUpPage } from '../pages/before-sign-up/before-sign-up';
 import { SignUpStudentPage } from '../pages/sign-up-student/sign-up-student'
@@ -19,6 +19,7 @@ import { SignUpDetailsPage } from '../pages/sign-up-details/sign-up-details'
 import { SignUpParentPage } from '../pages/sign-up-parent/sign-up-parent'
 import { LoginPage } from '../pages/login/login';
 import { TabsPages } from '../pages/tabs/tabs';
+import { TabsStudentPages} from "../pages/tabs-student/tabs-student";
 import { ProfileStudentPage } from '../pages/profile-student/profile-student';
 import { ProfileParentPage } from '../pages/profile-parent/profile-parent';
 import { FrgPasswordPage } from "../pages/frg-password/frg-password";
@@ -52,6 +53,7 @@ export const firebaseConfig = {
     ProfileStudentPage,
     ProfileParentPage,
     TabsPages,
+    TabsStudentPages,
     FrgPasswordPage,
     AddChildPage,
     InboxPage,
@@ -82,6 +84,7 @@ export const firebaseConfig = {
     ProfileParentPage,
     LoginPage,
     TabsPages,
+    TabsStudentPages,
     FrgPasswordPage,
     AddChildPage,
     InboxPage,
