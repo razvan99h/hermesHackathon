@@ -12,7 +12,7 @@ export class TabsPages {
   tab1Root = HomeParentPage;
   tab2Root = InboxPage;
   tab3Root = CalendarPage;
-  tab4Root = ProfilePage;
+  tab4Root = ProfileStudentPage; 
 
   constructor() {
 
