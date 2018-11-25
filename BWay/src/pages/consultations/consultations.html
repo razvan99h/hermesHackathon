@@ -19,10 +19,10 @@
   <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
 
 
+  <div *ngFor="let student of studentsToShow; let i = index">
+  <ion-card (click)="goToStudentProfile(student)">
 
-  <ion-card (click)="goToStudentProfile()">
-
-    <ion-item> 
+    <ion-item>
       <ion-avatar item-start>
         <img src="assets/imgs/graduate.png">
       </ion-avatar>
@@ -56,4 +56,5 @@
     </ion-row>
 
   </ion-card>
+  </div>
 </ion-content>

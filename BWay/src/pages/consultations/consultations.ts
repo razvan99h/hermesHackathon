@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { DatabaseProvider} from '../../providers/database/database'
 import { ShowStudentPage } from "../show-student/show-student";
 
 /**
@@ -16,22 +17,44 @@ import { ShowStudentPage } from "../show-student/show-student";
 })
 export class ConsultationsPage {
   cameFrom;
-
+  public studentsToShow = []
   constructor(
     public navCtrl: NavController,
-    public navParams: NavParams) {
+    public navParams: NavParams,
+    public database: DatabaseProvider) {
       this.cameFrom = navParams.get("cameFrom")
+      this.database.getAllUsers().subscribe(users =>{
+        this.studentsToShow = this.sortBy(this.toListAllStudents(users))
+
+      } )
   }
 
+  toListAllStudents(users)
+  {
+    var array = []
+    for(let user in users)
+      if(users[user].type == "student")
+      {
+        var obj = users[user]
+        obj.id = user
+        array.push(obj)
+      }
+
+    return array
+  }
+
+  sortBy(users)
+  {
+    return users
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad ConsultationsPage');
   }
 
-  goToStudentProfile()
+  goToStudentProfile(student)
   {
-
-
-    this.navCtrl.push(ShowStudentPage)
+    console.log(student)
+    this.navCtrl.push(ShowStudentPage, {"student":student})
   }
 
 }
