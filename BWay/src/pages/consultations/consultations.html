@@ -16,8 +16,28 @@
 
 
 <ion-content padding class="backgroundIMG">
-  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
 
+  <ion-searchbar (ionInput)="search($event)"></ion-searchbar>
+
+  <ion-row class="row">
+    <ion-col>
+      <button ion-button outline>
+        Gender
+        <ion-select [(ngModel)]="gender" (click)="filterGender()">
+          <ion-option value="male">Male</ion-option>
+          <ion-option value="female">Female</ion-option>
+        </ion-select>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button outline>
+        Level
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button outline>More</button>
+    </ion-col>
+  </ion-row>
 
   <div *ngFor="let student of studentsToShow; let i = index">
   <ion-card (click)="goToStudentProfile(student)">
@@ -47,7 +67,7 @@
       <p>{{student.data.self_description}}</p>
     </ion-card-content>
 
-    <ion-row>
+    <ion-row class="row">
 
       <ion-col>
         <button ion-button icon-start clear small>

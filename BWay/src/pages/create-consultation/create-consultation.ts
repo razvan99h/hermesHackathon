@@ -56,7 +56,6 @@ export class CreateConsultationPage {
       "duration" : this.duration,
       "date" : this.date,
       "time" : this.time,
-      "subject": this.student.subject
     };
 
     this.database.addConsultation(object)
